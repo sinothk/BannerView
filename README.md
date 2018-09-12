@@ -112,4 +112,6 @@
     </ScrollView>
     </LinearLayout>
     
-  
+# 效果图
+
+![](https://github.com/sinothk/BannerView/blob/master/app/art/banner_view_style1.png)
