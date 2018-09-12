@@ -74,3 +74,42 @@
         BannerUtil.stopAutoPlay();
     }
     }
+    
+## xml
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.sinothk.widget.bannerView.style1.BannerView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFF" />
+
+            <com.sinothk.widget.bannerView.style1.BannerView
+                android:id="@+id/banner2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFF" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="1200dp"
+                android:text="Button" />
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+    
+  
