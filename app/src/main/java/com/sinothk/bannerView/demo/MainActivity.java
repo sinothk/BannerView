@@ -12,25 +12,28 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    BannerView banner;
+    BannerView bannerView, banner2View;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        banner = (BannerView) findViewById(R.id.banner);
+        bannerView = (BannerView) findViewById(R.id.banner);
+        banner2View = (BannerView) findViewById(R.id.banner2);
 
         List<BannerBean> bannerBeanList = new ArrayList<>();
-        BannerBean banner1 = new BannerBean("", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg", 2);
-        BannerBean banner2 = new BannerBean("T2", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2160694151,724894006&fm=27&gp=0.jpg", 2);
-        BannerBean banner3 = new BannerBean("T3", "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1178098001,3025750323&fm=27&gp=0.jpg", 2);
+        BannerBean banner1 = new BannerBean("T1", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg", 12);
+        BannerBean banner2 = new BannerBean("T2", "http://p1.so.qhimgs1.com/t015f7060fbdb07aa81.jpg", 12);
+        BannerBean banner3 = new BannerBean("T3", "http://p2.so.qhimgs1.com/t016293e0d59c90e5c2.jpg", 12);
 
         bannerBeanList.add(banner1);
         bannerBeanList.add(banner2);
         bannerBeanList.add(banner3);
 
-        BannerUtil.show(this, banner, bannerBeanList);
+        BannerUtil.show(this, bannerView, bannerBeanList);
+
+        BannerUtil.show(this, banner2View, bannerBeanList);
 
         // =======================原版=================================
 //        Banner banner = (Banner) findViewById(R.id.banner);

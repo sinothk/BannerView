@@ -20,6 +20,11 @@
                 android:layout_height="200dp"
                 android:background="#FFF" />
 
+            <com.sinothk.widget.bannerView.style1.BannerView
+                android:id="@+id/banner2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFF" />
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
