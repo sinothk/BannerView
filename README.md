@@ -12,6 +12,7 @@
 
 	dependencies {
 	        implementation 'com.github.sinothk:BannerView:1.0.0912'
+    		implementation 'com.github.bumptech.glide:glide:3.7.0'
 	}
 
 # 使用
