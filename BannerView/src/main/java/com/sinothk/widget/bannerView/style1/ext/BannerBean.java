@@ -12,44 +12,26 @@ import android.content.Intent;
  */
 public class BannerBean {
     private String title;
-    private String img;
-    private int whRatio;
+    private Object img;// url,R.drawable.*
     private Intent intent;
 
-    public BannerBean() {
-    }
-
-    public BannerBean(String img) {
+    public BannerBean(Object img) {
         this.img = img;
     }
 
-    public BannerBean(String img, int whRatio) {
-        this.img = img;
-        this.whRatio = whRatio;
-    }
-
-    public BannerBean(String title, String img, int whRatio) {
+    public BannerBean(String title, String img) {
         this.title = title;
         this.img = img;
-        this.whRatio = whRatio;
     }
 
     public BannerBean(String img, Intent intent) {
         this.img = img;
-        this.whRatio = whRatio;
         this.intent = intent;
     }
 
-    public BannerBean(String img, int whRatio, Intent intent) {
-        this.img = img;
-        this.whRatio = whRatio;
-        this.intent = intent;
-    }
-
-    public BannerBean(String title, String img, int whRatio, Intent intent) {
+    public BannerBean(String title, String img, Intent intent) {
         this.title = title;
         this.img = img;
-        this.whRatio = whRatio;
         this.intent = intent;
     }
 
@@ -61,20 +43,12 @@ public class BannerBean {
         this.title = title;
     }
 
-    public String getImg() {
+    public Object getImg() {
         return img;
     }
 
-    public void setImg(String img) {
+    public void setImg(Object img) {
         this.img = img;
-    }
-
-    public int getWhRatio() {
-        return whRatio;
-    }
-
-    public void setWhRatio(int whRatio) {
-        this.whRatio = whRatio;
     }
 
     public Intent getIntent() {

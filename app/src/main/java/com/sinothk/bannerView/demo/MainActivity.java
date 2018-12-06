@@ -1,7 +1,7 @@
 package com.sinothk.bannerView.demo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.sinothk.widget.bannerView.style1.BannerView;
 import com.sinothk.widget.bannerView.style1.ext.BannerBean;
@@ -20,20 +20,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bannerView = (BannerView) findViewById(R.id.banner);
-        banner2View = (BannerView) findViewById(R.id.banner2);
-
         List<BannerBean> bannerBeanList = new ArrayList<>();
-        BannerBean banner1 = new BannerBean("T1", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg", 12);
-        BannerBean banner2 = new BannerBean("T2", "http://p1.so.qhimgs1.com/t015f7060fbdb07aa81.jpg", 12);
-        BannerBean banner3 = new BannerBean("T3", "http://p2.so.qhimgs1.com/t016293e0d59c90e5c2.jpg", 12);
-
+        BannerBean banner1 = new BannerBean("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg");
+        BannerBean banner2 = new BannerBean("http://p1.so.qhimgs1.com/t015f7060fbdb07aa81.jpg");
+        BannerBean banner3 = new BannerBean(R.drawable.no_banner);
         bannerBeanList.add(banner1);
         bannerBeanList.add(banner2);
         bannerBeanList.add(banner3);
 
-        BannerUtil.show(this, bannerView, bannerBeanList);
+        BannerUtil.show(this, bannerView, bannerBeanList, BannerUtil.CENTER);
 
-        BannerUtil.show(this, banner2View, bannerBeanList);
+        // =====================================================================
+
+        banner2View = (BannerView) findViewById(R.id.banner2);
+        List<BannerBean> bannerBeanList2 = new ArrayList<>();
+        BannerBean banner2_1 = new BannerBean("T1", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg");
+        BannerBean banner2_2 = new BannerBean("T2", "http://p1.so.qhimgs1.com/t015f7060fbdb07aa81.jpg");
+        BannerBean banner2_3 = new BannerBean("T3", "http://p2.so.qhimgs1.com/t016293e0d59c90e5c2.jpg");
+        bannerBeanList2.add(banner2_1);
+        bannerBeanList2.add(banner2_2);
+        bannerBeanList2.add(banner2_3);
+        BannerUtil.show(this, banner2View, bannerBeanList2);
 
         // =======================原版=================================
 //        Banner banner = (Banner) findViewById(R.id.banner);
