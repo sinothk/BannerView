@@ -75,15 +75,15 @@ public class BannerUtil {
         //banner设置方法全部调用完毕时最后调用
         banner.start();
 
-        banner.setOnBannerListener(new OnBannerListener() {
-            @Override
-            public void OnBannerClick(int position) {
-                Intent intent = bannerBeanList.get(position).getIntent();
-                if (intent != null) {
-                    activity.startActivity(intent);
-                }
-            }
-        });
+//        banner.setOnBannerListener(new OnBannerListener() {
+//            @Override
+//            public void OnBannerClick(int position) {
+//                Intent intent = bannerBeanList.get(position).getIntent();
+//                if (intent != null) {
+//                    activity.startActivity(intent);
+//                }
+//            }
+//        });
     }
 
     public static void show(final Activity activity, Object obj, final List<BannerBean> bannerBeanList, int where) {
@@ -134,15 +134,15 @@ public class BannerUtil {
         //banner设置方法全部调用完毕时最后调用
         banner.start();
 
-        banner.setOnBannerListener(new OnBannerListener() {
-            @Override
-            public void OnBannerClick(int position) {
-                Intent intent = bannerBeanList.get(position).getIntent();
-                if (intent != null) {
-                    activity.startActivity(intent);
-                }
-            }
-        });
+//        banner.setOnBannerListener(new OnBannerListener() {
+//            @Override
+//            public void OnBannerClick(int position) {
+//                Intent intent = bannerBeanList.get(position).getIntent();
+//                if (intent != null) {
+//                    activity.startActivity(intent);
+//                }
+//            }
+//        });
     }
 
     /**
