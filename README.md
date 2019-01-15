@@ -11,7 +11,7 @@
 ## Step 2. Add the dependency
 
 	dependencies {
-		implementation 'com.github.sinothk:BannerView:2.19.0118'
+		implementation 'com.github.sinothk:BannerView:2.19.0120'
 		implementation 'com.github.bumptech.glide:glide:3.7.0'
 	}
 
