@@ -3,9 +3,8 @@ package com.sinothk.widget.bannerView.style1.ext;
 import android.content.Context;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.sinothk.widget.bannerView.R;
 import com.sinothk.widget.bannerView.style1.loader.ImageLoader;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 
@@ -31,13 +30,14 @@ public class GlideImageLoader extends ImageLoader {
 //        eg：
 //        //Glide 加载图片简单用法
         if (path instanceof String) {
-            Glide.with(context).load((String) path).into(imageView);
-
+//            Glide.with(context).load((String) path).into(imageView);
+            Picasso.with(context).load((String) path).into(imageView);
         } else if (path instanceof Integer) {
-            Glide.with(context).load((Integer) path).into(imageView);
-
+//            Glide.with(context).load((Integer) path).into(imageView);
+            Picasso.with(context).load((Integer) path).into(imageView);
         } else if (path instanceof File) {
-            Glide.with(context).load((File) path).into(imageView);
+//            Glide.with(context).load((File) path).into(imageView);
+            Picasso.with(context).load((File) path).into(imageView);
         }
 
         //Picasso 加载图片简单用法

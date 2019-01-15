@@ -342,12 +342,14 @@ public class BannerView extends FrameLayout implements OnPageChangeListener {
         bannerDefaultImage.setVisibility(GONE);
         initImages();
         for (int i = 0; i <= count + 1; i++) {
-            View imageView = null;
+            ImageView imageView = null;
             if (imageLoader != null) {
-                imageView = imageLoader.createImageView(context);
+                imageView = (ImageView) imageLoader.createImageView(context);
             }
             if (imageView == null) {
                 imageView = new ImageView(context);
+                imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                imageView.setAdjustViewBounds(true);
             }
             setScaleType(imageView);
             Object url = null;

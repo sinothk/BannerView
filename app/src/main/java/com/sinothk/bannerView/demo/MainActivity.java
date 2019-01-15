@@ -1,7 +1,12 @@
 package com.sinothk.bannerView.demo;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
+import android.widget.GridLayout;
+import android.widget.LinearLayout;
 
 import com.sinothk.widget.bannerView.style1.BannerView;
 import com.sinothk.widget.bannerView.style1.ext.BannerBean;
@@ -19,12 +24,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        WindowManager wm = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics dm = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(dm);
+        int width = dm.widthPixels;
+        int h = 508 * width / 1080;
+
         bannerView = (BannerView) findViewById(R.id.banner);
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(width, h);
+        bannerView.setLayoutParams(layoutParams);
+
+
         List<BannerBean> bannerBeanList = new ArrayList<>();
-        BannerBean banner1 = new BannerBean("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg");
-        BannerBean banner2 = new BannerBean("http://p1.so.qhimgs1.com/t015f7060fbdb07aa81.jpg");
-        BannerBean banner3 = new BannerBean(R.drawable.no_banner);
-        bannerBeanList.add(banner1);
+//        BannerBean banner1 = new BannerBean("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg");
+//        BannerBean banner2 = new BannerBean("http://p1.so.qhimgs1.com/t015f7060fbdb07aa81.jpg");
+//        BannerBean banner3 = new BannerBean(R.drawable.no_banner);
+//        bannerBeanList.add(banner1);
+
+        BannerBean banner2 = new BannerBean(R.drawable.banner01);
+        BannerBean banner3 = new BannerBean(R.drawable.banner02);
         bannerBeanList.add(banner2);
         bannerBeanList.add(banner3);
 

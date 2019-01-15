@@ -14,6 +14,7 @@ public class BannerBean {
     private String title;
     private Object img;// url,R.drawable.*
     private Intent intent;
+    private String openUrl;
 
     public BannerBean(Object img) {
         this.img = img;
@@ -57,5 +58,13 @@ public class BannerBean {
 
     public void setIntent(Intent intent) {
         this.intent = intent;
+    }
+
+    public String getOpenUrl() {
+        return openUrl;
+    }
+
+    public void setOpenUrl(String openUrl) {
+        this.openUrl = openUrl;
     }
 }
