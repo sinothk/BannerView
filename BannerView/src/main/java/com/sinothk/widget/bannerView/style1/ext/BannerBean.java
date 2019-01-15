@@ -20,6 +20,11 @@ public class BannerBean {
         this.img = img;
     }
 
+    public BannerBean(Object img, String openUrl) {
+        this.img = img;
+        this.openUrl = openUrl;
+    }
+
     public BannerBean(String title, String img) {
         this.title = title;
         this.img = img;
