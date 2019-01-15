@@ -16,25 +16,29 @@ public class BannerBean {
     private Intent intent;
     private String openUrl;
 
+    @Deprecated
     public BannerBean(Object img) {
         this.img = img;
     }
 
-    public BannerBean(Object img, String openUrl) {
+    public BannerBean(String img, String openUrl) {
         this.img = img;
         this.openUrl = openUrl;
     }
 
-    public BannerBean(String title, String img) {
+    public BannerBean(String title, String img, String openUrl) {
         this.title = title;
         this.img = img;
+        this.openUrl = openUrl;
     }
 
+    @Deprecated
     public BannerBean(String img, Intent intent) {
         this.img = img;
         this.intent = intent;
     }
 
+    @Deprecated
     public BannerBean(String title, String img, Intent intent) {
         this.title = title;
         this.img = img;
