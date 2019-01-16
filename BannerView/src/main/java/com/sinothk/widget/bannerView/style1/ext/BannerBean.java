@@ -16,6 +16,8 @@ public class BannerBean {
     private Intent intent;
     private String openUrl;
 
+    private String bizId;
+
     @Deprecated
     public BannerBean(Object img) {
         this.img = img;
@@ -75,5 +77,18 @@ public class BannerBean {
 
     public void setOpenUrl(String openUrl) {
         this.openUrl = openUrl;
+    }
+
+    public String getBizId() {
+        return bizId;
+    }
+
+    public void setBizId(String bizId) {
+        this.bizId = bizId;
+    }
+
+    public BannerBean setBizId(BannerBean bannerBean, String bizId) {
+        bannerBean.setBizId(bizId);
+        return bannerBean;
     }
 }
