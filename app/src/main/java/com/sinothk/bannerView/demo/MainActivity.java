@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         int width = dm.widthPixels;
         int h = 508 * width / 1080;
 
-        bannerView = (BannerView) findViewById(R.id.banner);
+        bannerView = findViewById(R.id.banner);
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(width, h);
         bannerView.setLayoutParams(layoutParams);
