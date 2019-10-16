@@ -38,13 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         List<BannerBean> bannerBeanList = new ArrayList<>();
-//        BannerBean banner1 = new BannerBean("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg");
-//        BannerBean banner2 = new BannerBean("http://p1.so.qhimgs1.com/t015f7060fbdb07aa81.jpg");
-//        BannerBean banner3 = new BannerBean(R.drawable.no_banner);
-//        bannerBeanList.add(banner1);
-
-        BannerBean banner2 = new BannerBean(R.drawable.banner01);
-        BannerBean banner3 = new BannerBean(R.drawable.banner02);
+        BannerBean banner2 = BannerBean.getEntity("T1", R.drawable.banner01, "1");
+        BannerBean banner3 = BannerBean.getEntity("T1", R.drawable.banner02, "1");
         bannerBeanList.add(banner2);
         bannerBeanList.add(banner3);
 
@@ -52,15 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
         // =====================================================================
 
-        banner2View = (BannerView) findViewById(R.id.banner2);
+        banner2View = findViewById(R.id.banner2);
         List<BannerBean> bannerBeanList2 = new ArrayList<>();
-        BannerBean banner2_1 = new BannerBean("T1", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg");
-        BannerBean banner2_2 = new BannerBean("T2", "http://p1.so.qhimgs1.com/t015f7060fbdb07aa81.jpg");
-        BannerBean banner2_3 = new BannerBean("T3", "http://p2.so.qhimgs1.com/t016293e0d59c90e5c2.jpg");
+
+        BannerBean banner2_1 = BannerBean.getEntity("T1", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg", "1");
+        BannerBean banner2_2 = BannerBean.getEntity("T2", "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2998709676,3706664345&fm=26&gp=0.jpg", "1");
+        BannerBean banner2_3 = BannerBean.getEntity("T3", "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1148107543,1622080121&fm=26&gp=0.jpg", "1");
+
         bannerBeanList2.add(banner2_1);
         bannerBeanList2.add(banner2_2);
         bannerBeanList2.add(banner2_3);
-        BannerUtil.show(this, banner2View, bannerBeanList2);
+
+        BannerUtil.show(this, banner2View, bannerBeanList2, BannerUtil.RIGHT);
 
         // =======================原版=================================
 //        Banner banner = (Banner) findViewById(R.id.banner);
