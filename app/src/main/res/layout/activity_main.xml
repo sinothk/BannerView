@@ -20,10 +20,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:background="#FFF"
+                app:image_scale_type="center_crop"
                 app:indicator_drawable_selected="@drawable/banner_white_radius"
                 app:indicator_drawable_unselected="@drawable/banner_gray_radius"
                 app:indicator_height="10dp"
-                app:image_scale_type="center_crop"
                 app:indicator_width="10dp" />
 
             <com.sinothk.widget.bannerView.style1.BannerView
