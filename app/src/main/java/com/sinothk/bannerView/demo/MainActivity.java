@@ -6,12 +6,14 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sinothk.widget.bannerView.style1.BannerView;
 import com.sinothk.widget.bannerView.style1.ext.BannerBean;
 import com.sinothk.widget.bannerView.style1.ext.BannerUtil;
+import com.sinothk.widget.bannerView.style1.listener.OnBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,10 +47,17 @@ public class MainActivity extends AppCompatActivity {
 
         BannerUtil.show(this, bannerView, bannerBeanList, BannerUtil.CENTER);
 
+        bannerView.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                Toast.makeText(MainActivity.this, position + "", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         // =====================================================================
 
         banner2View = findViewById(R.id.banner2);
-        List<BannerBean> bannerBeanList2 = new ArrayList<>();
+        final List<BannerBean> bannerBeanList2 = new ArrayList<>();
 
         BannerBean banner2_1 = BannerBean.getEntity("T1", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg", "1");
         BannerBean banner2_2 = BannerBean.getEntity("T2", "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2998709676,3706664345&fm=26&gp=0.jpg", "1");
@@ -59,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
         bannerBeanList2.add(banner2_3);
 
         BannerUtil.show(this, banner2View, bannerBeanList2, BannerUtil.RIGHT);
+
+        banner2View.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) { //bannerBeanList2.get(position).getBizId()
+                Toast.makeText(MainActivity.this, position + "", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         // =======================原版=================================
 //        Banner banner = (Banner) findViewById(R.id.banner);

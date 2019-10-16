@@ -592,24 +592,36 @@ public class BannerView extends FrameLayout implements ViewPager.OnPageChangeLis
         }
         if (position == 0) position = count;
         if (position > count) position = 1;
-        switch (bannerStyle) {
-            case BannerConfig.CIRCLE_INDICATOR:
-                break;
-            case BannerConfig.NUM_INDICATOR:
-                numIndicator.setText(position + "/" + count);
-                break;
-            case BannerConfig.NUM_INDICATOR_TITLE:
-                numIndicatorInside.setText(position + "/" + count);
-                bannerTitle.setText(titles.get(position - 1));
-                break;
-            case BannerConfig.CIRCLE_INDICATOR_TITLE:
-                bannerTitle.setText(titles.get(position - 1));
-                break;
-            case BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE:
-                bannerTitle.setText(titles.get(position - 1));
-                break;
+
+        if (bannerStyle == BannerConfig.NUM_INDICATOR) {
+            numIndicator.setText(position + "/" + count);
+        }else if(BannerConfig.NUM_INDICATOR_TITLE == bannerStyle){
+            numIndicatorInside.setText(position + "/" + count);
+            bannerTitle.setText(titles.get(position - 1));
+        }else if(BannerConfig.CIRCLE_INDICATOR_TITLE == bannerStyle){
+            bannerTitle.setText(titles.get(position - 1));
+
+        }else if(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE == bannerStyle){
+            bannerTitle.setText(titles.get(position - 1));
         }
 
+//        switch (bannerStyle) {
+//            case BannerConfig.CIRCLE_INDICATOR:
+////                break;
+////            case BannerConfig.NUM_INDICATOR:
+////                numIndicator.setText(position + "/" + count);
+////                break;
+//            case BannerConfig.NUM_INDICATOR_TITLE:
+//                numIndicatorInside.setText(position + "/" + count);
+//                bannerTitle.setText(titles.get(position - 1));
+//                break;
+//            case BannerConfig.CIRCLE_INDICATOR_TITLE:
+//                bannerTitle.setText(titles.get(position - 1));
+//                break;
+//            case BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE:
+//                bannerTitle.setText(titles.get(position - 1));
+//                break;
+//        }
     }
 
     @Deprecated

@@ -86,65 +86,6 @@ public class BannerUtil {
 //        });
     }
 
-//    public static void show(final Activity activity, Object obj, final List<BannerBean> bannerBeanList, int where) {
-//        banner = (BannerView) obj;
-//        if (banner == null || bannerBeanList == null || bannerBeanList.size() == 0) {
-//            return;
-//        }
-//
-//        List<String> titles = new ArrayList<>();
-//        List<Object> images = new ArrayList<>();
-//
-//        for (BannerBean bannerBean : bannerBeanList) {
-//            String title = bannerBean.getTitle();
-//            if (title != null && title.length() != 0) {
-//                titles.add(title);
-//            }
-//
-//            Object img = bannerBean.getImg();
-//            if (img != null) {
-//                images.add(img);
-//            }
-//        }
-//
-//        if (images.size() == 0) return;
-//
-//        if (titles.size() == 0 || titles.size() != images.size()) {// 标题为空，或标题数量和图片不一致时，不显示标题
-//            //设置banner样式
-//            banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
-//        } else {
-//            //设置banner样式
-//            banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
-//            //设置标题集合（当banner样式有显示title时）
-//            banner.setBannerTitles(titles);
-//        }
-//
-//        //设置图片加载器
-//        banner.setImageLoader(new GlideImageLoader());
-//        //设置图片集合
-//        banner.setImages(images);
-//        //设置banner动画效果
-//        banner.setBannerAnimation(Transformer.Default);
-//        //设置自动轮播，默认为true
-//        banner.isAutoPlay(true);
-//        //设置轮播时间
-//        banner.setDelayTime(4000);
-//        //设置指示器位置（当banner模式中有指示器时）
-//        banner.setIndicatorGravity(where);
-//        //banner设置方法全部调用完毕时最后调用
-//        banner.start();
-//
-////        banner.setOnBannerListener(new OnBannerListener() {
-////            @Override
-////            public void OnBannerClick(int position) {
-////                Intent intent = bannerBeanList.get(position).getIntent();
-////                if (intent != null) {
-////                    activity.startActivity(intent);
-////                }
-////            }
-////        });
-//    }
-
     /**
      * 开始轮播
      */
@@ -163,52 +104,4 @@ public class BannerUtil {
         }
     }
 
-//    public static void showNetData(final Activity activity, Object obj, final List<BannerBean> bannerBeanList) {
-//        banner = (BannerView) obj;
-//        if (banner == null || bannerBeanList == null || bannerBeanList.size() == 0) {
-//            return;
-//        }
-//
-//        List<String> titles = new ArrayList<>();
-//        List<String> images = new ArrayList<>();
-//
-//        for (BannerBean bannerBean : bannerBeanList) {
-//            String title = bannerBean.getTitle();
-//            if (title != null && title.length() != 0) {
-//                titles.add(title);
-//            }
-//
-//            String imgUrl = bannerBean.getOpenUrl();
-//            if (imgUrl != null) {
-//                images.add(imgUrl);
-//            }
-//        }
-//
-//        if (images.size() == 0) return;
-//
-//        if (titles.size() == 0 || titles.size() != images.size()) {// 标题为空，或标题数量和图片不一致时，不显示标题
-//            //设置banner样式
-//            banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
-//        } else {
-//            //设置banner样式
-//            banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
-//            //设置标题集合（当banner样式有显示title时）
-//            banner.setBannerTitles(titles);
-//        }
-//
-//        //设置图片加载器
-//        banner.setImageLoader(new GlideImageLoader());
-//        //设置图片集合
-//        banner.setImages(images);
-//        //设置banner动画效果
-//        banner.setBannerAnimation(Transformer.Default);
-//        //设置自动轮播，默认为true
-//        banner.isAutoPlay(true);
-//        //设置轮播时间
-//        banner.setDelayTime(5000);
-//        //设置指示器位置（当banner模式中有指示器时）
-//        banner.setIndicatorGravity(BannerConfig.RIGHT);
-//        //banner设置方法全部调用完毕时最后调用
-//        banner.start();
-//    }
 }
