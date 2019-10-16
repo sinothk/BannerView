@@ -2,11 +2,12 @@ package com.sinothk.bannerView.demo;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.sinothk.widget.bannerView.style1.BannerView;
 import com.sinothk.widget.bannerView.style1.ext.BannerBean;
