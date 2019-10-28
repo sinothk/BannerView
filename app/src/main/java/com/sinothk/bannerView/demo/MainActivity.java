@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         BannerBean banner2_1 = BannerBean.getEntity("T1", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2727129703,1839762678&fm=27&gp=0.jpg", "1");
         BannerBean banner2_2 = BannerBean.getEntity("T2", "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2998709676,3706664345&fm=26&gp=0.jpg", "1");
-        BannerBean banner2_3 = BannerBean.getEntity("T3", "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1148107543,1622080121&fm=26&gp=0.jpg", "1");
+        BannerBean banner2_3 = BannerBean.getEntity("T3", "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2998709676,3706664345&fm=26&gp=0.jpg", "1");
 
         bannerBeanList2.add(banner2_1);
         bannerBeanList2.add(banner2_2);

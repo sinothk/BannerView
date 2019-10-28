@@ -71,7 +71,7 @@ public class BannerUtil {
         //设置轮播时间
         banner.setDelayTime(5000);
         //设置指示器位置（当banner模式中有指示器时）
-        banner.setIndicatorGravity(BannerConfig.RIGHT);
+        banner.setIndicatorGravity(where);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
 
