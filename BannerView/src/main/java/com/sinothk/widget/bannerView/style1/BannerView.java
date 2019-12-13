@@ -347,7 +347,7 @@ public class BannerView extends FrameLayout implements ViewPager.OnPageChangeLis
             }
             if (imageView == null) {
                 imageView = new ImageView(context);
-                imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                imageView.setScaleType(ScaleType.CENTER_CROP);
                 imageView.setAdjustViewBounds(true);
             }
             setScaleType(imageView);

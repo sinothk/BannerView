@@ -9,7 +9,7 @@ public abstract class ImageLoader implements ImageLoaderInterface<ImageView> {
     @Override
     public ImageView createImageView(Context context) {
         ImageView imageView = new ImageView(context);
-        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setAdjustViewBounds(true);
         return imageView;
     }
